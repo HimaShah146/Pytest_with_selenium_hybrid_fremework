@@ -11,4 +11,3 @@ class MyAccount(BasePage):
 
     def success_login(self):
         return self.retrive_text(self.MY_ACCOUNT_TEXT)
-

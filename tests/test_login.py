@@ -14,6 +14,7 @@ class TestLogin(BaseTest):
     chrome_options = Options()
     chrome_options.add_argument("--log-level=3")  # Only log FATAL errors to terminal
     chrome_options.add_experimental_option("excludeSwitches", ["enable-logging"])
+
     # Define log file path
     service = Service(log_path="logs/chromedriver.log")  # Save ChromeDriver logs
 

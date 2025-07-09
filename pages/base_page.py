@@ -26,4 +26,3 @@ class BasePage:
     def retrive_text(self,locator):
         self.get_element(locator).is_displayed()
         return self.get_element(locator).text
-

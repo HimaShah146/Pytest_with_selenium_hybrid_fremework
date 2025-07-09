@@ -24,7 +24,6 @@ def get_data_from_excel(path, sheet_name):
         for c in range(1, total_cols + 1):
             row_list.append(sheet.cell(row=r, column=c).value)
         final_list.append(row_list)
-
     return final_list
 
 # def get_row_count(path, sheet_name):

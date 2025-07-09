@@ -44,3 +44,4 @@ class RegisterPage(BasePage):
             return self.get_element(locator).text
         return None
 
+
