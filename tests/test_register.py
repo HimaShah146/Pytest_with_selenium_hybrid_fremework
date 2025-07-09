@@ -5,7 +5,6 @@ from selenium.webdriver.chrome.webdriver import WebDriver
 from pages import home_page
 from tests.BaseTest import BaseTest
 
-
 class TestRegister(BaseTest):
     driver: WebDriver
     def test_empty_form_register(self):

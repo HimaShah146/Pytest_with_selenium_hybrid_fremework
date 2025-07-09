@@ -12,7 +12,6 @@ from utilities import ReadConfigurations
 #     request.cls.driver = driver
 #     yield
 #     driver.quit()
-
 @pytest.fixture()
 def setup_class_browser(request):
     browser = ReadConfigurations.read_configurations("basic info", "browser")
