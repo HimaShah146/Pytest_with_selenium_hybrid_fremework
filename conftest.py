@@ -1,8 +1,6 @@
 import pytest
 from selenium import webdriver
 from utilities import ReadConfigurations
-# from selenium.webdriver.chrome.options import Options
-# import undetected_chromedriver as uc
 
 # @pytest.fixture(scope="class")
 # def setup_class_browser(request):
@@ -16,11 +14,8 @@ from utilities import ReadConfigurations
 @pytest.fixture()
 def setup_class_browser(request):
     browser = ReadConfigurations.read_configurations("basic info", "browser")
-
     if browser == "chrome":
         driver = webdriver.Chrome()
-        # options = Options()
-        # driver = uc.Chrome(options=options)
     elif browser == "firefox":
         driver = webdriver.Firefox()
     elif browser == "edge":
@@ -38,4 +33,3 @@ def setup_class_browser(request):
     request.cls.driver = driver
     yield
     driver.quit()
-    #driver.__del__ = lambda self=None: None  # ✅ prevent double-quit issue
